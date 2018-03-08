@@ -1,0 +1,40 @@
+﻿<Window x:Class="RandomGeneration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomGeneration"
+        mc:Ignorable="d"
+        Title="Generator" Height="350" Width="555.924" Background="Black">
+    <Grid>
+        <TextBox x:Name="LengthTextBox" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="140,14,0,0" TextWrapping="Wrap" Text="81" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Number of characters:" Background="Black" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="Seed1" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,60,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed2" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,88,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed3" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,116,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed4" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,116,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed5" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,144,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed6" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,172,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed7" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,200,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed8" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,228,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed9" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,256,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="Seed10" Background="Black" Foreground="White" BorderThickness="0,0,0,1" HorizontalAlignment="Left" Height="23" Margin="10,284,0,0" TextWrapping="NoWrap" Text="Seed" VerticalAlignment="Top" Width="497"/>
+        <Button x:Name="GenerateBtn" BorderThickness="0,0,0,0" Background="Black" Foreground="White" Click="GenerateBtn_Click" Content="Generate" HorizontalAlignment="Left" Margin="192,14,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <Button x:Name="Copy1"  BorderThickness="0,0,0,0" Background="Black" Foreground="White" Click="Copy1_Click" Content="⎘" ToolTip="Copy to clipboard" HorizontalAlignment="Left" Margin="512,63,0,236" VerticalAlignment="Center" Width="20" Height="20"/>
+
+        <Label x:Name="InteractionIndicator" Content="Copied" Visibility="Hidden" Background="White" Foreground="Black" FontSize="56"  HorizontalAlignment="Left" Margin="172,116,0,0" VerticalAlignment="Top" Height="84" Width="184"/>
+        <Label x:Name="InteractionIndicatorSeed" Content="Copied" Visibility="Hidden" Background="White" Foreground="Black" FontSize="11" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,209,0,0" VerticalAlignment="Top" Height="31" Width="497"/>
+        
+        <!--Info bar-->
+        <Rectangle x:Name="InfoBarBG" Fill="White" Visibility="Hidden" HorizontalAlignment="Left" Height="25" Margin="407,-1,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="LabelSymbol" Content="✓" Visibility="Hidden" HorizontalAlignment="Left" Margin="412,-1,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label x:Name="LabelText" Content="Copied" Visibility="Hidden" HorizontalAlignment="Left" Margin="431,-1,0,0" VerticalAlignment="Top" Height="25"/>
+
+        <ComboBox x:Name="DropDownMenu" BorderThickness="0,0,0,0" Background="Black" Visibility="Hidden" HorizontalAlignment="Left" Margin="282,15,0,0" VerticalAlignment="Top" Width="120" BorderBrush="Black" Foreground="White" OpacityMask="Black"/>
+       
+        <Button x:Name="BtnCoords" Click="Button_Click" Content="Button" HorizontalAlignment="Left" Margin="282,41,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+    </Grid>
+</Window>
