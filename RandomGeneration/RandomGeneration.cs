@@ -18,17 +18,30 @@ namespace RandomGeneration
             {
                 charList.Add((char)i);
             }
-            charList.Add((char)57);
+            charList.Add((char)57); // adds number 9
             //Number of characters 26 + 1 = 27
 
             string str = "";
+
             Random random = new Random();
 
+            var xPosition = "";
+            var previousPosition = "";
             for (int i = 0; i < seedLength; i++)
             {
-                str += charList[random.Next(0, charList.Count())];
+
+                while (xPosition == previousPosition)
+                {
+                    Thread.Sleep(10);
+                    xPosition = MainWindow.GetCursorPos();
+                }
+                previousPosition = xPosition;
+
+                int rndNumber = random.Next(0, charList.Count()) + int.Parse(xPosition);
+                int arrayNumber = rndNumber % 27;
+
+                str += charList[arrayNumber];
             }
-            Thread.Sleep(1);
 
             return str;
         }

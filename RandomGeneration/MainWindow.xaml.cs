@@ -35,24 +35,15 @@ namespace RandomGeneration
         private void GenerateBtn_Click(object sender, RoutedEventArgs e)
         {
             ClearBoxes();
-            List<TextBox> list = new List<TextBox>() { Seed1, Seed2, Seed3, Seed4, Seed5, Seed5, Seed6, Seed7, Seed8, Seed9, Seed10 };
+            List<TextBox> list = new List<TextBox>() { Seed1 };
+
             FillTextBoxes(list);
         }
         private void ClearBoxes()
         {
             Dispatcher.Invoke(() =>
             {
-
                 Seed1.Text = "";
-                Seed2.Text = "";
-                Seed3.Text = "";
-                Seed4.Text = "";
-                Seed5.Text = "";
-                Seed6.Text = "";
-                Seed7.Text = "";
-                Seed8.Text = "";
-                Seed9.Text = "";
-                Seed10.Text = "";
             });
         }
         private void FillTextBoxes(List<TextBox> list)
@@ -138,7 +129,7 @@ namespace RandomGeneration
             string seed = "";
             Task.Run(() =>
             {
-                seed = GetCursorPos(1);
+                seed = GetCursorPos();
                 Dispatcher.Invoke(() =>
                     {
                         Seed1.Text = seed;
@@ -147,17 +138,13 @@ namespace RandomGeneration
 
         }
 
-        private string GetCursorPos(int numberOfPositions)
+        public static string GetCursorPos()
         {
             string xx = "";
 
-            for (int i = 0; i < 28; i++)
-            {
-                Point x = GetMousePosition();
-                xx += (int)x.X;
-                xx += "-";
-                Thread.Sleep(50);
-            }
+            Point x = GetMousePosition();
+
+            xx = x.X.ToString();
 
             return xx;
         }
